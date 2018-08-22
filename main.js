@@ -1,10 +1,10 @@
 "use strict";
 
 function renderCoffee(coffee) {
-    var html = '<div>';
+    var html = '<div class="col-6">';
     html += '<p class="d-none">' + coffee.id + '</p>';
-    html += '<h1>' + coffee.name + '</h1>';
-    html += '<p>' + coffee.roast + '</p>';
+    html += '<h1 class="mb-0">' + coffee.name + '</h1>';
+    html += '<p class="text-justify text-secondary">' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
@@ -12,9 +12,11 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = 0; i <=coffees.length - 1; i++) {
+    html +='<div class="row">'
+    for(var i = coffees.length - 1;i>=0; i--) {
         html += renderCoffee(coffees[i]);
     }
+    html +='</div>'
     return html;
 }
 
