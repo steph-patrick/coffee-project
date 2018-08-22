@@ -11,7 +11,7 @@
 
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="header mx-auto">
             <h3 class="display-4">Covefefe</h3>
@@ -23,9 +23,9 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-6" id="coffees">
+        <div class="col-4" id="coffees">
         </div>
-        <div class="float-right">
+        <div class="col-4">
             <!------FIRST FORM----->
             <form>
                 <label for="roast-selection">Roast</label>
@@ -43,30 +43,30 @@
                 <button class="btn btn-primary w-100 mt-3" id="submit-input" type="button">Submit</button>
             </form>
         </div>
-    </div>
     <div class="row">
         <!-----SPACER---->
-        <div>
-        </div>
-        <div>
+        <!--<div class="col-6">-->
+        <!--</div>-->
+        <div class="col-4">
 
             <!-------SECOND FORM------>
             <form>
                 <label for="roast-input">Roast</label>
                 <select class="custom-select" id="roast-input">
-                    <option selected>all</option>
-                    <option>light</option>
-                    <option>medium</option>
+                    <!--<option selected>all</option>-->
+                    <option selected>light</option>
+                    <option >medium</option>
                     <option>dark</option>
                 </select>
                 <label for="name-input">Covfefe Name</label>
                 <div class="input-group">
                     <input id="name-input" type="text" class="form-control"/>
                 </div>
-                <button class="btn btn-primary  mt-3" id="user-submit" type="button">Submit</button>
+                <button class="btn btn-primary w-100 mt-3" id="user-submit" type="button">Submit</button>
             </form>
         </div>
     </div>
+</div>
 </div>
  <!--custom js script------>
     <script src="main.js"></script>
