@@ -60,8 +60,11 @@ function inputCoffees(){
 function userCoffees(){
     var nameSelect = nameInput.value;
     var roastSelect = roastInput.value;
-    var coffeeObject = {id: 1, name: 'name', roast: 'roast'};
+    var coffeeObject = {'id': coffees.length, 'name': nameSelect, 'roast': roastSelect};
     coffees.push(coffeeObject);
+
+
+    tbody.innerHTML = renderCoffees(coffees);
 
 }
 
