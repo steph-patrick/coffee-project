@@ -42,7 +42,7 @@ function inputCoffees(){
     var selectedName = nameSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (selectedName === coffee.name) {
+        if (selectedName.toLowerCase() === coffee.name.toLowerCase()) {
 
             filteredCoffees.push(coffee);
         }
@@ -76,7 +76,10 @@ var submitInputButton = document.querySelector('#submit-input');
 var roastSelection = document.querySelector('#roast-selection');
 var nameSelection = document.querySelector('#covfefe-selection');
 
-tbody.innerHTML = renderCoffees(coffees);
+var inputCoffee = document.querySelector('#inputCoffees');
 
+
+tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
-submitInputButton.addEventListener('click', inputCoffees);
+// submitInputButton.addEventListener('click', inputCoffees);
+inputCoffee.addEventListener('onkeyup',inputCoffees);
