@@ -29,6 +29,11 @@ function updateCoffees(e) {
 
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
+
+    if(selectedRoast === "all"){
+        tbody.innerHTML = renderCoffees(coffees);
+
+    }
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
