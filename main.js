@@ -38,6 +38,19 @@ function updateCoffees(e) {
     }
 }
 
+function inputCoffees(e){
+    e.preventDefault();
+    var typedRoast = roastTyped.value;
+    var filteredCoffees = [];
+    coffees.forEach(function(coffee) {
+        if (typedRoast === coffee.roast) {
+            filteredCoffees.push(coffee);
+        }
+
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -58,8 +71,12 @@ var coffees = [
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
+var submitInputButton = document.querySelector('#submit-input');
+
 var roastSelection = document.querySelector('#roast-selection');
+var roastTyped = document.querySelector('#covfefe-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+submitInputButton.addEventListener('click', inputCoffees);
