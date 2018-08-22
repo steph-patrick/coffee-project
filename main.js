@@ -55,6 +55,15 @@ function inputCoffees(){
     });
     tbody.innerHTML = renderCoffees(twiceFilteredCoffees);
 }
+//function to input user coffee into coffee array
+
+function userCoffees(){
+    var nameSelect = nameInput.value;
+    var roastSelect = roastInput.value;
+    var coffeeObject = {id: 1, name: 'name', roast: 'roast'};
+    coffees.push(coffeeObject);
+
+}
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -80,12 +89,12 @@ var submitButton = document.querySelector('#submit');
 
 var roastSelection = document.querySelector('#roast-selection');
 var nameSelection = document.querySelector('#covfefe-selection');
-
-var inputCoffee = document.querySelector('#inputCoffees');
-
+var roastInput = document.querySelector('#roast-input');
+var nameInput = document.querySelector('#name-input');
 
 tbody.innerHTML = renderCoffees(coffees);
 roastSelection.addEventListener('change', updateCoffees);
 
-// submitInputButton.addEventListener('click', inputCoffees);
-inputCoffee.addEventListener('onkeyup',inputCoffees);
+
+var userSubmitBtn = document.querySelector('#user-submit');
+userSubmitBtn.addEventListener('click', userCoffees);
