@@ -71,7 +71,7 @@ var coffees = [
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
-var submitInputButton = document.querySelector('#submit-input');
+// var submitInputButton = document.querySelector('#submit-input');
 
 var roastSelection = document.querySelector('#roast-selection');
 var nameSelection = document.querySelector('#covfefe-selection');
