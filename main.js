@@ -1,7 +1,7 @@
 "use strict";
 
 function renderCoffee(coffee) {
-    var html = '<div class="col-6">';
+    let html = '<div class="col-6">';
     html += '<p class="d-none">' + coffee.id + '</p>';
     html += '<h1 class="mb-0">' + coffee.name + '</h1>';
     html += '<p class="text-justify text-secondary">' + coffee.roast + '</p>';
@@ -11,9 +11,9 @@ function renderCoffee(coffee) {
 }
 
 function renderCoffees(coffees) {
-    var html = '';
-    html +='<div class="row">'
-    for(var i = coffees.length - 1;i>=0; i--) {
+    let html = '';
+    html +='<div class="row">';
+    for(let i = coffees.length - 1;i>=0; i--) {
         html += renderCoffee(coffees[i]);
     }
     html +='</div>'
@@ -22,7 +22,7 @@ function renderCoffees(coffees) {
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
+    let selectedRoast = roastSelection.value;
     var filteredCoffees = [];
 
 
@@ -47,7 +47,7 @@ function inputCoffees(){
 
         if (coffee.name.toLowerCase().indexOf(selectedName.toLowerCase()) > -1 &&
         coffee.name.toLowerCase().charAt(0) === selectedName.toLowerCase().charAt(0) &&
-            (roastSelection.value === coffee.roast || roastSelection.value == "all")) {
+            (roastSelection.value === coffee.roast || roastSelection.value === "all")) {
 
             twiceFilteredCoffees.push(coffee);
         }
