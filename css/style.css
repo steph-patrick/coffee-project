@@ -8,5 +8,6 @@ td, th {
     padding: 5px 10px;
 }
 body{
-    background-image: url(patrick.jpeg);
+    background: url("../assets/bkgnd-img-coffee-cup-full-beans.jpeg") no-repeat center center fixed;
+    background-size: cover;
 }
