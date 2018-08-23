@@ -1,3 +1,10 @@
+
+body {
+    background: url("../assets/bkgnd-img-coffee-cup-full-beans.jpeg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -6,8 +13,4 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
-}
-body{
-    background: url("../assets/bkgnd-img-coffee-cup-full-beans.jpeg") no-repeat center center fixed;
-    background-size: cover;
 }
