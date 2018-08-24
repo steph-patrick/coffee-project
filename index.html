@@ -15,7 +15,7 @@
 
 
 </head>
-<body style="font-family: 'Baloo Bhai', cursive; color: antiquewhite">
+<body style="font-family: 'Baloo Bhai', cursive;">
 
 <div class="container-fluid">
     <div class="row">
@@ -29,49 +29,57 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-4" id="coffees">
-        </div>
-        <div class="col-4">
-            <!------FIRST FORM----->
-            <form>
-                <label for="roast-selection">Roast</label>
-                <select class="custom-select" id="roast-selection">
-                    <option selected>all</option>
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-                <button class="btn btn-primary w-100 mt-3" id="submit" type="button">Submit</button>
-                <label for="covfefe-selection">Covfefe Name</label>
-                <div class="input-group">
-                    <input  onkeyup="inputCoffees()" id="covfefe-selection" type="text" class="form-control"/>
+        <div class="col-8" id="coffees"></div>
+            <!--</div>-->
+            <div class="col-4" id="coffee-forms">
+                <!------FIRST FORM----->
+                <div class="card mb-5" style="width: 18em;">
+                    <div class="card-body">
+                        <form>
+                            <h4 class="card-title">Find your blend</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">select roast type</h6>
+                            <select class="custom-select" id="roast-selection">
+                                <option selected>all</option>
+                                <option>light</option>
+                                <option>medium</option>
+                                <option>dark</option>
+                            </select>
+                            <div class="input-group mt-2">
+                                <input  onkeyup="inputCoffees()" id="covfefe-selection" type="text" class="form-control" placeholder="Enter coffee name..."/>
+                            </div>
+                            <button class="btn w-100 mt-3" id="submit-input" type="button">Submit</button>
+                        </form>
+                    </div>
                 </div>
-                <button class="btn btn-primary w-100 mt-3" id="submit-input" type="button">Submit</button>
-            </form>
-        </div>
-    <div class="row">
-        <!-----SPACER---->
-        <!--<div class="col-6">-->
-        <!--</div>-->
-        <div class="col-4">
+            <!--</div>-->
+        <!--<div class="row">-->
+            <!-----SPACER---->
+            <!--<div class="col-6">-->
+            <!--</div>-->
+            <!--<div class="col-4">-->
 
-            <!-------SECOND FORM------>
-            <form>
-                <label for="roast-input">Roast</label>
-                <select class="custom-select" id="roast-input">
-                    <!--<option selected>all</option>-->
-                    <option selected>light</option>
-                    <option >medium</option>
-                    <option>dark</option>
-                </select>
-                <label for="name-input">Covfefe Name</label>
-                <div class="input-group">
-                    <input id="name-input" type="text" class="form-control"/>
+                <!-------SECOND FORM------>
+                <div class="card" style="width: 18em;">
+                    <div class="card-body">
+                        <form>
+                            <h4 class="card-title">Suggest your own</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">select roast type</h6>
+                            <select class="custom-select" id="roast-input">
+                                <!--<option selected>all</option>-->
+                                <option selected>light</option>
+                                <option >medium</option>
+                                <option>dark</option>
+                            </select>
+                            <div class="input-group mt-2">
+                                <input id="name-input" type="text" class="form-control" placeholder="Enter coffee name..."/>
+                            </div>
+                            <button class="btn w-100 mt-3" id="user-submit" type="button">Submit</button>
+                        </form>
+                    </div>
                 </div>
-                <button class="btn btn-primary w-100 mt-3" id="user-submit" type="button">Submit</button>
-            </form>
-        </div>
+            </div>
     </div>
+
 </div>
 
 
