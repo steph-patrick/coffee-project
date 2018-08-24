@@ -29,11 +29,14 @@ body {
     z-index: 2;
     position: relative;
     color: #803420;
+    text-shadow: 2px 2px #1e0403;
 }
 
 .container-fluid #coffees{
     z-index: 2;
     color: #cb9978;
+    text-shadow: 2px 2px #1d0403;
+
 }
 
 .container-fluid #coffee-forms{
@@ -42,7 +45,7 @@ body {
 
 /*----card customization--------*/
 .card{
-    background-color: rgba(26, 4, 0, 0.5);
+    background-color: rgba(26, 4, 0, 0.7);
 
 }
 button{
