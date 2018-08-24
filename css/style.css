@@ -35,6 +35,7 @@ body {
     z-index: 2;
     color: #cb9978;
 }
+
 .container-fluid #coffee-forms{
     z-index: 2;
 }
@@ -49,7 +50,20 @@ button{
 }
 #roast-selection,#covfefe-selection,#roast-input,#name-input{
     background-color: rgba(212, 151, 115, 0.5);
+    color: #1e0403;
+
 }
+.card-title{
+    color: #803420;
+}
+.card-subtitle{
+
+    color: #a35e4c;
+}
+::placeholder{
+    color: #1e0403 !important;
+}
+
 
 
 
